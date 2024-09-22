@@ -1,6 +1,6 @@
-### SpringSecurity Config
+# SpringSecurity Config
 
-### Authorization Code Template
+# Authorization Code Template
 
 @Configuration
 @EnableWebSecurity
