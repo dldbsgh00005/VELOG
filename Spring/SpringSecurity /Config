@@ -1,10 +1,12 @@
 // SpringSecurity Config
-// Authorization Code Template
+
 
 @Configuration
 @EnableWebSecurity
 public class SpringSecurityConfig {
 
+// Authorization Code Template
+	
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests((authorize) -> authorize.requestMatchers("", "/login", "/join").permitAll()
