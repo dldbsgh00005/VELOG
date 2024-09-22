@@ -1,5 +1,7 @@
 ### SpringSecurity Config
 
+### Authorization Code Template
+
 @Configuration
 @EnableWebSecurity
 public class SpringSecurityConfig {
