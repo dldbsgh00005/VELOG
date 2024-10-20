@@ -1,0 +1,2 @@
+# 241019 - Spring Security 내부구조, Flow, Authentication, Authorization, DelegatingFilterChainProxy, FilterChainProxy, SecurityFilterChain, Filters, AuthenticationFilter, UsernameAuthenticationToken, AuthenticationManager, ProviderManger, AuthenticationProvider,
+           UserDetailService, UserDetails, 
