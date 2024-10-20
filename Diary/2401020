@@ -1,0 +1,28 @@
+# 241020(일) Github, Spring Security
+
+1. Git Config
+git config --global user.name
+git config --global user.email
+
+git config --global --add user.name
+git config --global --add user.email
+
+git remote -v
+git remote add origin [URL]
+git remote 
+
+git init
+
+git add .
+git commit -m "[MESSAGE]"
+git commit -am "[MESSAGE]"
+git push -u origin [BRANCH]
+git push
+
+git branch [BRANCH]
+git branch -d [BRANCH]
+git branch -D [BRANCH]
+git switch [BRANCH]
+git switch -c [BRANCH]
+
+
