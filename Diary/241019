@@ -6,7 +6,7 @@ DelegatingFilterChainProxy, FilterChainProxy, SecurityFilterChain, Filters,
 AuthenticationFilter, UsernameAuthenticationToken, AuthenticationManager, ProviderManger, AuthenticationProvider, UserDetailService, UserDetails
 
 ### UserDetails
-- principal , credential, authories
+- principal , credential /  authories
 
 
 
