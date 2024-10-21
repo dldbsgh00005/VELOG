@@ -27,8 +27,10 @@ git switch -c [BRANCH]
 
 git stash 
 git stash list
-git stash apply [BRANCH]
+git stash apply [stash name]
 
-git reset 
+git reset, revert ( reset은 기존의 history를 삭제하고 이전의 커밋으로 돌아가는것, revert는 과거의 히스토리로 새로운 커밋을 추가로 만드는 것)
+reset의 옵션, soft, mixed, hard
+
 
 
