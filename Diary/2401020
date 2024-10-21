@@ -25,4 +25,10 @@ git branch -D [BRANCH]
 git switch [BRANCH]
 git switch -c [BRANCH]
 
+git stash 
+git stash list
+git stash apply [BRANCH]
+
+git reset 
+
 
