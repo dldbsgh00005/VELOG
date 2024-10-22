@@ -1,9 +1,19 @@
-# 241021(월) Javascript 기초 문법 (얄팍한 코딩사전 js 기초 문법편)
+# 241021(월) Javascript 기초 문법 (얄팍한 코딩사전 js 기초 문법편) , DOM , Axios get방식, 
 
 arr = ['a','b','c']
 
 for(i in arr){} // 0,1,2
 for(i of arr){} // 'a','b','c'
+
+# 원시 자료형 number,string,null,undefined,boolean
+
+# document.querySelector, document.querySelectorAll, document.getElementById, (Class, TagName, TagNameNS), document.createElement, 
+TagName은 해당되는 태그를 전부 배열에 담아 가져오기 때문에 인덱싱 해줘야함.
+
+# confirm, prompt, addEventListener('[TRIGGER]', [FUNCTION])
+
+# [ELEMENT].appendChild(),removeChild(),firstChild(),lastChild()
+
 
 # Axios 활용 방법 1
 
