@@ -12,6 +12,30 @@ SecurityConfig의 HttpSecurity를 매개변수로, SecurityFilterChain을 리턴
 Session Fixation Protection이 가능하다. 
 방법은 총 3가지가 있다. createNewSessionId(세션은 똑같지만 sessionId만 변경), newSession(기존의 속성들을 버리고 새로운 세션을 생성), migrateSession(기존의 속성들을 가지고 새 세션을 생성)
 
+Session Fixation Protection을 위해 한 가지 더 고민해본 것이 있다.
+바로 maximumSession()의 매개변수로 1을 주는 것인데.
+
+Session Fixation Attack의 경우 과정을 살펴보면
+attacker가 Valid SessionId 얻는다. -> 일반 유저에게 attacker의 sessionId를 전달한다. -> 일반 유저가 attacker의 sessionid로 로그인 그리고 sessionid가 유효해짐 -> attacker는 같은 sessionId로 권한을 얻고 활동한다.
+인데, 일반 유저가 먼저 로그인을 하게 되고 그에 따라 valid sessionid의 우선권은 일반 유저에게 돌아간다. 그에 따라 자연스럽게 attacker의 session은 무효화.
+
+maximumSession은 직접적으로 session Fixation을 위해 만들어진 것은 아니나, indirectly, 간접적으로 session fixation protection의 효과를 가질 수는 있어보인다.
+하지만 newSession()을 쓴다면 굳이 maximumSession을 쓸 필요는 없어보인다. 
+혹시 서버의 자원을 한정적으로 사용하게 하고싶다면 겸사겸사 쓸만할지도?
+
+# PROXY의 실사용 유무에 대한 고찰
+간략하게 적어보겠다.
+내가 이해한 proxy의 주요 기능은 다음 3가지와 같다. 
+1. tracking
+2. load balancer
+3. hide address ( reverse proxy의 경우에만 해당! forward proxy는 해당되지 않음)
+
+하지만 생각을 해본 결과 
+1. 서버의 규모가 작다면 tracking이 큰 의미가 있을까 ( log만 잘 찍어도 되지 않을까)
+2. 서버가 분산되어있지 않다면 ( scale out 생각도 없다면 ) load balancer는 의미가 없다.
+3. 어차피 spring security, aws, jwt, https 등으로 보안을 2,3,4중으로 둘러칠텐데 주소를 은닉하는게 유의미한 차이를 보일까
+
+이를 통해 proxy 적용에 대해 고민을 하게 되었다. 끝
 
 # JWT
 기존 Spring Security에서는 경로별 인가작업만을 진행하고 인증작업은 JWT로 진행하면 어떨까 하는 생각을 했었다.
