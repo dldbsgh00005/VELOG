@@ -5,3 +5,7 @@
 
 ### Build Proxy Server >> Build LoadBalancer  
 ### Deploy on AWS
+
+
+## Open proxy 설치 완료.
+## 가볍게 proxy listener 변경 완료
