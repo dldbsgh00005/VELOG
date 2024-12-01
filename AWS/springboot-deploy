@@ -38,3 +38,8 @@ c/users/[사용자 계정]/.ssh/id_rsa.hub 파일 확인
 >> 다시 git clone [git repository ssh url] 
 >> 성공!  >> ls 명렁어 실행시 clone 받은 content가 있어야 함
 
+9. springboot project안으로 cd 후 
+>> ./gradlew build 
+>> 실패시 chmod +x ./gradlew 후 다시 ./gradlew build >> 성공!!
+
+cd build >> cd lib >> jar 파일 확인
