@@ -69,4 +69,8 @@ Repository setting에서 secret 변수 작성
 
 dependency-submission에 gradle 관련 working-directroy 설정 
 
+- name: Generate and submit dependency graph
+  working-directory: ./springboot-deploy # Gradle Wrapper 경로 추가
+  uses: gradle/actions/dependency-submission@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
 
