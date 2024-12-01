@@ -60,5 +60,13 @@ Repository setting에서 secret 변수 작성
 
 위와 같이 수정 해준다.
 
+# gradle permission denied 관련 오류시
+>> chmod +x ./gradlew 
+
+# dependency-submission ./gradlew 못찾을 시
+>> 로컬에서 ./gradlew dependencies 명령어 실행
+>> ./github/workflow/gradle.yml 파일에서  
+
+dependency-submission에 gradle 관련 working-directroy 설정 
 
 
