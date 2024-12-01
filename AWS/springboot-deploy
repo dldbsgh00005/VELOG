@@ -43,3 +43,11 @@ c/users/[사용자 계정]/.ssh/id_rsa.hub 파일 확인
 >> 실패시 chmod +x ./gradlew 후 다시 ./gradlew build >> 성공!!
 
 cd build >> cd lib >> jar 파일 확인
+
+# Github Actions CI/CD 파일
+
+Repository setting에서 secret 변수 작성
+- EC2_HOST >> ec2 instace ip
+- EC2_USER >> ubuntu
+- EC2_KEY >> pem키의 private 
+
