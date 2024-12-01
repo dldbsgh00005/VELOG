@@ -51,3 +51,14 @@ Repository setting에서 secret 변수 작성
 - EC2_USER >> ubuntu
 - EC2_KEY >> pem키의 private 
 
+# Github Actions 빌드 실패시
+- 경로를 확인한 후 알맞지 않을 시
+
+- name: Build with Gradle Wrapper
+      working-directory: ./[프로젝트 이름]  # Gradle Wrapper가 있는 경로로 변경
+      run: ./gradlew build
+
+위와 같이 수정 해준다.
+
+
+
