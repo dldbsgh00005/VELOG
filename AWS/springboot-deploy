@@ -1,0 +1,13 @@
+# Springboot-Deploy
+
+1. aws 계정 생성
+2. aws ec2 instance 생성 및 IAM 역할 생성
+3. rds 데이터 베이스 생성 ( mysql )  # mysql의 t2-micro ( 프리티어 사용 가능 ) 으로 생성 postgrel로 생성할 시 t3-micro로 하게 되면 요금이 부과될 수 있음 t2-micro를 이용하자
+4. s3 bucket 생성 ( 일단은 IAM에 RDS랑 S3의 AMAZONRDSREADONLYACCESS랑 AMAZONS3READONLYACCESS만 줬음 ) 
+5. .ssh 폴더로 가서 pem키를 찾는다. 
+>> ssh -i [pem키 파일 이름] ubuntu@[ec2 instance ip address]
+>> sudo apt update
+>> sudo snap install aws-cli 
+6. Git 설치
+>> sudo apt-get install git
+>> git --version 혹은 git -v 로 깃 버전 확인
