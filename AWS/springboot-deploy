@@ -11,3 +11,4 @@
 6. Git 설치
 >> sudo apt-get install git
 >> git --version 혹은 git -v 로 깃 버전 확인
+
