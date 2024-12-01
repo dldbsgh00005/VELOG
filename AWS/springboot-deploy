@@ -23,4 +23,4 @@ ssh_getkey -t rsa -C [github email]
 c/users/[사용자 계정]/.ssh/id_rsa.hub 파일 확인
 
 혹은 cat id_rsa.pub ( 해당 경로로 이동 후 실행 ) 
->> github repository의 setting으로 이동 후 ssh key등록 
+>> github의 setting으로 이동 후 ssh key등록  ( github 전체 설정 , 우측 상단 ) 
