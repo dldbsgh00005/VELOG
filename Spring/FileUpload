@@ -1,0 +1,26 @@
+package packageName;
+
+@RestController
+@Slf4j
+public class FileUpload{
+
+  @GetMapping("/file")
+  public String fileUpload(@RequestParam("file") MultipartFile[] files ){
+
+    for(MultipartFile file : files){
+        log.info("filename : " + file.getOriginalFileName);
+
+        UUID uuid = UUID.randomUUID();
+        String originalFileName = file.getOriginalFileName(); 
+        String saveFileName = uuid + originalFileName;
+        String url = "C:\\users\\dldbs\\Pictures\\FileUpload";
+        File saveFile = new File(url, saveFileName);
+
+        file.transferTo(saveFile);
+    }
+
+    return "filed uploaded";
+  }
+
+}
+
