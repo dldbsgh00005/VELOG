@@ -1,0 +1,36 @@
+### /etc/nginx/sites-available/example 에 작성할 코드
+
+  server {
+    listen 80;
+    server_name example.com www.example.com;
+
+    # 모든 HTTP 요청을 HTTPS로 리다이렉트
+    return 301 https://$host$request_uri;
+}
+ 
+server {
+    listen 443 ssl;
+    server_name example.com www.example.com;
+
+    // SSL 프로토콜 및 암호화 설정 (필요에 따라 수정)
+    // ssl_protocols TLSv1.2 TLSv1.3;
+    // ssl_prefer_server_ciphers on;
+    // ssl_ciphers HIGH:!aNULL:!MD5;
+
+    // # 필요한 경우 HSTS 헤더 추가
+    // add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+    # 예: 백엔드(Spring Boot 등)로 프록시하는 경우
+    location / {
+        proxy_pass http://localhost:8080;  # 백엔드 서버의 주소와 포트
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+### 설정 파일 작성 완료 후
+>> sudo ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/
+>> sudo nginx -t
+>> sudo systemctl reload nginx
