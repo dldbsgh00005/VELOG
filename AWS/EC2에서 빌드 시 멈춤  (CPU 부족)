@@ -1,0 +1,12 @@
+# 프리티어 EC2 t2.micro ( 램 1GB ) 를 사용 중이고
+# 빌드 작업중 멈추는 현상이 발생한다면
+
+Swap 기능이 필요한 것일 수도!
+
+>> sudo if=/dev/zero of=/swapfile bs=128M count=16 ( bs는 block-size, count 는 블록의 개수) 
+>>sudo chmod 600 /swapfile
+>> sudo mkswap /swapfile
+>> sudo swapon /swapfile
+>> sudo swapon -s
+>> sudo nano /etc/fstab
+>> /swapfile swap swap defaults 0 0
