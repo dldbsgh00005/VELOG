@@ -3,7 +3,7 @@
 
 Swap 기능이 필요한 것일 수도!
 
->> sudo if=/dev/zero of=/swapfile bs=128M count=16 ( bs는 block-size, count 는 블록의 개수) 
+>> sudo dd if=/dev/zero of=/swapfile bs=128M count=16 ( bs는 block-size, count 는 블록의 개수) 
 >>sudo chmod 600 /swapfile
 >> sudo mkswap /swapfile
 >> sudo swapon /swapfile
