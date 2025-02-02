@@ -2,7 +2,7 @@
 
   server {
     listen 80;
-    server_name example.com www.example.com;
+    server_name [certbot으로 ssl 발급 받은 도메인];
 
     # 모든 HTTP 요청을 HTTPS로 리다이렉트
     return 301 https://$host$request_uri;
@@ -10,7 +10,11 @@
  
 server {
     listen 443 ssl;
-    server_name example.com www.example.com;
+    server_name [certbot으로 ssl 발급 받은 도메인];
+
+    # SSL 인증서와 키 파일 경로 (Certbot으로 발급받은 경우)
+    ssl_certificate /etc/letsencrypt/live/[도메인명]/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/[도메인명]/privkey.pem;
 
     // SSL 프로토콜 및 암호화 설정 (필요에 따라 수정)
     // ssl_protocols TLSv1.2 TLSv1.3;
