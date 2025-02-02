@@ -7,6 +7,7 @@ Swap 기능이 필요한 것일 수도!
 >>sudo chmod 600 /swapfile
 >> sudo mkswap /swapfile
 >> sudo swapon /swapfile
+>> sudo swapon /swapfile
 >> sudo swapon -s
 >> sudo nano /etc/fstab
 >> /swapfile swap swap defaults 0 0
