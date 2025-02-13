@@ -2,19 +2,19 @@
 
   server {
     listen 80;
-    server_name [certbot으로 ssl 발급 받은 도메인];
+    server_name 📌도메인📌;
 
     # 모든 HTTP 요청을 HTTPS로 리다이렉트
     return 301 https://$host$request_uri;
 }
  
 server {
-    listen 443 ssl;
-    server_name [certbot으로 ssl 발급 받은 도메인];
+    listen 443 ssl 📌http2📌;
+    server_name 📌도메인📌;
 
     # SSL 인증서와 키 파일 경로 (Certbot으로 발급받은 경우)
-    ssl_certificate /etc/letsencrypt/live/[도메인명]/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/[도메인명]/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/📌도메인📌/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/📌도메인📌/privkey.pem;
 
     // SSL 프로토콜 및 암호화 설정 (필요에 따라 수정)
     // ssl_protocols TLSv1.2 TLSv1.3;
@@ -25,8 +25,8 @@ server {
     // add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
 
     # 예: 백엔드(Spring Boot 등)로 프록시하는 경우
-    location / {
-        proxy_pass http://localhost:8080;  # 백엔드 서버의 주소와 포트
+    location 📌경로📌 {
+        proxy_pass 📌내부 주소 예 : https://localhost:8080📌;  # 백엔드 서버의 주소와 포트
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -35,6 +35,6 @@ server {
 }
 
 ### 설정 파일 작성 완료 후
->> sudo ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/
->> sudo nginx -t
->> sudo systemctl reload nginx
+>> sudo ln -s /etc/nginx/sites-available/📌이름📌 /etc/nginx/sites-enabled/
+>> sudo nginx -t 📌nginx 설정 검사하는 명령어📌
+>> sudo systemctl reload nginx 📌설정 완료 후 리로드📌
