@@ -10,3 +10,10 @@
   - Images
   - Extensions
   - Plugins
+
+# docker hub
+- docker에서 운영하는 public 레지스트리
+- private registry를 1개 생성 가능 ( 무료 기준 ) 
+
+# 자체 제작 서버
+- localhost 등에 생성하는 레지스트리 ( 자유도 높음, 무제한 생성 가능 )
