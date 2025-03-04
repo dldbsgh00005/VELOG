@@ -24,7 +24,7 @@
 
 # Strings - 경매 분산락 
 
-- SETNX [KEY] [VALUE] / 키가 존재 할 경우에만 동작
+- SETNX [KEY] [VALUE] / 기존 키가 존재 하지 않을 경우에만 동작
 
 - Rate Limiting(fixed-window) / 특정 시간에 특정 수의 요청을 제한 (ERROR-CODE : 429)
 
