@@ -17,4 +17,12 @@ public class CorsConfig implements WebMvcConfigurer {
 
 }
 
-위와 같은 코드를 작성해주면 해결
+@Bean
+UrlBasedCorsConfigurationSource corsConfigurationSource() {
+	CorsConfiguration configuration = new CorsConfiguration();
+	configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000","http://localhost:5173"));
+	configuration.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","OPTIONS"));
+	UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+	source.registerCorsConfiguration("/**", configuration);
+	return source;
+}
