@@ -1,0 +1,14 @@
+# JwtFilter
+- 검증
+accessToken을 request의 header에서 획득 
+null 체크
+null이면 다음 필터 실행 후 리턴
+null이 아니면 Bearer로 시작 여부 체크
+Bearer로 시작하지 않으면 다음 필터 실행 후 리턴
+String 클래스의 subString 메소드를 활용, 인덱스 7부터 토큰 획득
+가져온 토큰 검증
+만료된 토큰이면 response에 401 추가 후 리턴
+
+
+- 발급
+- 다음 필터 실행
