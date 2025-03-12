@@ -1,1 +1,17 @@
-#
+# JWT ( Spring 진영에서 JJWT를 지원한다. )
+header, Payload, Signature 로 구성
+
+header : 토큰의 타입, 서명에 사용할 알고리즘으로 구성
+
+payload : 필요한 정보를 Key-Value 형태로 담는다.
+Issuer, Subject, Audience, Expiration, Issue at 등이 있으며
+커스텀 가능
+ 
+Signature : payload의 내용을 .를 구분자로 header에 작성 된 알고리즘으로 SecretKey를 사용해 암호화 한다.
+
+
+
+
+
+
+
