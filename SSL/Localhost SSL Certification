@@ -1,0 +1,13 @@
+# git bash에서 아래 명령어를 실행시키면 된다.
+
+keytool -genkeypair -alias springboot \
+  -keyalg RSA -keysize 2048 \
+  -storetype PKCS12 \
+  -keystore src/main/resources/keystore.p12 \
+  -validity 3650 \
+  -dname "CN=localhost, OU=Development, O=MyCompany, L=Seoul, ST=Seoul, C=KR"
+
+ -keystore이 인증서 파일이 저장될 경로.
+ -keyalg 는 알고리즘
+ -keysize 는 키 사이즈
+ 
