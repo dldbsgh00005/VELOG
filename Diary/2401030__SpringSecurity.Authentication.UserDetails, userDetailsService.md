@@ -1,3 +1,4 @@
+```
 # 241031__SpringSecurity.Authentication.UserDetails, userDetailsService
 
 UserDetailsService는 CustomUserDetailsService라는 구현체를 만들어 implements 해준다.
@@ -25,3 +26,4 @@ UserDetails 또한 CustomUserDetails에 implements 해준다.
 그에 따라 상속받을 메소드들이 많다.
 
 getUsername, getPassword, getAuthority, isExpired 등... 
+```
