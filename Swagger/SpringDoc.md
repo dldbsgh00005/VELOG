@@ -1,8 +1,10 @@
-# ✅ 의존성
+# SpringDoc 
+
+## ✅ 의존성
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-api:2.8.6'
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6'
 
-# ✅ properties
+## ✅ properties
  
 ### SPRING DOC
 	springdoc.api-docs.path=/api-docs
