@@ -5,11 +5,11 @@
 # ✅ properties
  
 # SPRING DOC
-springdoc.api-docs.path=/api-docs
-springdoc.writer-with-default-pretty-printer=true
-#springdoc.swagger-ui.configUrl=/swagger-config
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.path=/swagger-ui/index.html
+	springdoc.api-docs.path=/api-docs
+	springdoc.writer-with-default-pretty-printer=true
+	#springdoc.swagger-ui.configUrl=/swagger-config
+	springdoc.swagger-ui.enabled=true
+	springdoc.swagger-ui.path=/swagger-ui/index.html
 
 # SpringDocConfig
 
