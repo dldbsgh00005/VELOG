@@ -13,10 +13,10 @@
 
 # SpringDocConfig
 
- @Bean
-    public GroupedOpenApi api() {
-        return GroupedOpenApi.builder()
-                .group("API")
-                .pathsToMatch("/**")
-                .build();
-    }
+	 @Bean
+    	public GroupedOpenApi api() {
+        	return GroupedOpenApi.builder()
+                	.group("API")
+                	.pathsToMatch("/**")
+                	.build();
+    	}
