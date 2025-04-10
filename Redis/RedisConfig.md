@@ -1,3 +1,4 @@
+```
 @Configuration
 public class RedisConfig {
 
@@ -57,3 +58,4 @@ public class RedisConfig {
     }
 
 }
+```
