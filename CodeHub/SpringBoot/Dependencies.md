@@ -39,6 +39,13 @@ runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3' // JSON 처리 라이브러리
 annotationProcessor 'org.projectlombok:lombok'
 compileOnly 'org.projectlombok:lombok'
 
+/** SPRING DOC **/
+implementation 'org.springdoc:springdoc-openapi-starter-webmvc-api:2.8.6'
+implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6'
+
+/** KAFKA **/
+implementation 'org.springframework.kafka:spring-kafka'
+
 /** TEST */
 testImplementation 'org.springframework.security:spring-security-test'
 testImplementation 'org.springframework.boot:spring-boot-starter-test'
