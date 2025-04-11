@@ -1,3 +1,4 @@
+'''
 # 예제: OpenJDK 17을 사용하는 경우
 FROM openjdk:17-jdk-alpine
 
@@ -10,3 +11,5 @@ EXPOSE 8080
 
 # 애플리케이션 실행
 ENTRYPOINT ["java", "-jar", "/app.jar"]
+
+'''
