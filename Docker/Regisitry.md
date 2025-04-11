@@ -1,3 +1,5 @@
+```
+
 # Registry
 
 - docker run -p [port]:[port] --name [registry name] [registry image name]
@@ -9,3 +11,5 @@
 # registry에 이미지 push, pull
 - docker push [registry경로]/[이미지 이름]:[태그]
 - docker pull [registry경로]/[이미지 이름]:[태그]
+
+```
