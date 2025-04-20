@@ -4,7 +4,7 @@ public class GlobalExceptionHandler {
     
     /**
      * 1.명확한 상황 전달
-     * 2.예외 처리 비용 감소 -> 비즈니스 로직 가용 시간 증가
+     * 2.예외 처리 비용 감소 -> 비즈니스 로직 작성 가용시간 증가
      * **/
     
     @ExceptionHandler(RuntimeException.class)
