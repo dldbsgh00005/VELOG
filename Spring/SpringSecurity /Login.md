@@ -13,4 +13,4 @@
 - UserDetailsService
 - UserDetails
 
-<div>![image](https://github.com/user-attachments/assets/ba8c5d0d-60b1-4cbb-812d-423ab5f5848d) </div>
+![image](https://github.com/user-attachments/assets/ba8c5d0d-60b1-4cbb-812d-423ab5f5848d) 
