@@ -15,7 +15,7 @@
 
 ![image](https://github.com/user-attachments/assets/ba8c5d0d-60b1-4cbb-812d-423ab5f5848d) 
 
-### 🛠️ CustomLoginFilter 실제 소스 코드 (기본형, 흐름 이해를 위한 코드이므로 구체적인 로직들은 작성하지 않았습니다.)
+### 📌 CustomLoginFilter 실제 소스 코드 (기본형, 흐름 이해를 위한 코드이므로 구체적인 로직들은 작성하지 않았습니다.)
 ```
 @Slf4j
 public class CustomLoginFilter extends AbstractAuthenticationProcessingFilter {
@@ -83,7 +83,7 @@ public class CustomLoginFilter extends AbstractAuthenticationProcessingFilter {
 }
 ```
 
-### 🛠️ CustomUserDetailsService 실제 구현 소스 코드
+### 📌 CustomUserDetailsService 실제 구현 소스 코드
 ```
 @Service
 @Slf4j
@@ -111,7 +111,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 }
 ```
 
-### 🛠️ CustomUserDetails (필요 시 getter 메소드를 추가로 커스텀 해도 됩니다.)
+### 📌 CustomUserDetails (필요 시 getter 메소드를 추가로 커스텀 해도 됩니다.)
 ```
 public class CustomUserDetails implements UserDetails {
 
