@@ -1,6 +1,6 @@
-# Spring Security에서 로그인 진행 Flow
+# 📋 Spring Security에서 로그인 진행 Flow
 
-## UsernamePasswordAuthenticationFilter을 사용 할 때 Flow
+## ✅ UsernamePasswordAuthenticationFilter을 사용 할 때 Flow
 1. UsernamePasswordAuthenticationFilter ( UsernamePasswordAuthenticationToken 객체 생성 ) 
 2. AuthenticationManager의 authenticate()에 UsernamePasswordAuthenticationToken을 인자로 담아 인증 진행
 3. 이후 ProviderManager, DaoAuthenticationProvider을 호출.
@@ -8,14 +8,14 @@
 5. authenticationManager까지 반환 되어 authenticate() 메소드 실행
 6. 인증 결과에 따라 UsernamePasswordAuthenticationFilter에서 SuccessHandler, FailureHandler 둘 중 하나를 실행하게 됨
 
-## Custom 해야 할 부분
+## ✅ Custom 해야 할 부분
 - UsernamePasswordAuthenticationFilter ( 이하 CustomLoginFilter 라고 부른다.)
 - UserDetailsService (이하 CustomUserDetailsService 라고 부른다.)
 - UserDetails (이하 CustomUserDetails 라고 부른다.)
 
 ![image](https://github.com/user-attachments/assets/ba8c5d0d-60b1-4cbb-812d-423ab5f5848d) 
 
-### CustomLoginFilter 실제 소스 코드 (기본형, 흐름 이해를 위한 코드이므로 구체적인 로직들은 작성하지 않았습니다.)
+### 🛠️ CustomLoginFilter 실제 소스 코드 (기본형, 흐름 이해를 위한 코드이므로 구체적인 로직들은 작성하지 않았습니다.)
 ```
 @Slf4j
 public class CustomLoginFilter extends AbstractAuthenticationProcessingFilter {
@@ -83,7 +83,7 @@ public class CustomLoginFilter extends AbstractAuthenticationProcessingFilter {
 }
 ```
 
-### CustomUserDetailsService 실제 구현 소스 코드
+### 🛠️ CustomUserDetailsService 실제 구현 소스 코드
 ```
 @Service
 @Slf4j
@@ -111,7 +111,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 }
 ```
 
-### CustomUserDetails (필요 시 getter 메소드를 추가로 커스텀 해도 됩니다.)
+### 🛠️ CustomUserDetails (필요 시 getter 메소드를 추가로 커스텀 해도 됩니다.)
 ```
 public class CustomUserDetails implements UserDetails {
 
