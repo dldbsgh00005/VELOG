@@ -1,9 +1,0 @@
-Github actions ci/cd 구현중 HOST_KEY 에러 발생
-
->> 기존에는 second_semester_first_project.pem 의 값을 작성했으나 ( Private Key ) 
-
-이는 ec2에 작성한 second_semester_first_project.pem 키의 Public Key 버전과 대조하여 "클라이언트"를 증명하는데 사용된다.
-
-HOST_KEY는 "서버"의 신원을 증명하는데 사용된다.
-
-그러므로 EC2 서버의 /etc/ssh/ssh_host_rsa_key.pub의 코드를 작성해줘야 한다.
