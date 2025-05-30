@@ -1,0 +1,15 @@
+# EC2에서 Springboot 실행시 명령어
+java \
+  -Dcom.sun.management.jmxremote \
+  -Dcom.sun.management.jmxremote.port=📌포트번호📌 \
+  -Dcom.sun.management.jmxremote.rmi.port=📌포트번호📌 \
+  -Dcom.sun.management.jmxremote.authenticate=📌false📌 \
+  -Dcom.sun.management.jmxremote.ssl=📌false📌 \
+  -Djava.rmi.server.hostname=📌EC2의_퍼블릭_IP또는_도메인📌 \
+  -jar your-application.jar
+
+VisualVM을 실행시킨다.
+
+Remote ~~ 우클릭 > add connection > Host Address 입력 > 우클릭 > JMX Connection > 
+
+성공!

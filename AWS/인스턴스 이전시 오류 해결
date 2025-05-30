@@ -1,0 +1,18 @@
+인스턴스를 이전 할 때 발생 할 수 있는 오류와 해결 방안
+
+
+### 오류
+
+1. 기존 인스턴스에서 연결했던 Elastic IP를 재연결 할 시 known_hosts에 등록되지 않아 access denied 발생
+- 새로운 known_hosts 등록이 필요
+  
+>> ssh-keygen -R [Elastic IP] (해당 IP의 등록된 known_hosts 제거)
+>> 새로운 known_hosts 추가
+>> ssh-add [id_rsa의 경로]
+>> ssh-add -l (ssh키 저장된 리스트 출력)
+
+2. 만약 ssh-add 관련 명령어 실행 시 Connection ... 관련 오류 발생
+- ssh 연결이 열려있지 않은 상태이므로 ssh connection을 열어줘야 한다.
+
+>> ssh -T git@github.com 확인
+>> eval $(ssh-agent -s)  (Connection을 위한 명령어)

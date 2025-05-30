@@ -1,0 +1,12 @@
+# 토큰을 어디에 관리해야 할까?
+
+웹 일반적인 관리
+1. AccessToken,RefreshToken 을 LocalStorage에 보관, Authorization 헤더에 Bearer + accessToken, AccessToken 재발급 요청 시 RefreshToken을 헤더에 담아 요청
+2. RefreshToken을 쿠키에, AccessToken은 HttpHeader. ( 요청 기간이 비교적 긴 RefreshToken을 안전하게 쿠키에 저장 XSS 공격에 비교적 안전 )
+
+웹 개인적인 관리
+- AccessToken, RefreshToken 모두 쿠키에 저장하고 요청 시 Cookie[] cookies = request.getCookies(); 
+
+앱도 동일하다. 
+Http 요청 시 헤더, 쿠키 둘 다 활용이 가능하다.
+

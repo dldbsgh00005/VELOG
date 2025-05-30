@@ -1,0 +1,18 @@
+// SpringSecurity Config
+
+
+@Configuration
+@EnableWebSecurity
+public class SpringSecurityConfig {
+
+// Authorization Code Template
+	
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		http.authorizeHttpRequests((authorize) -> authorize.requestMatchers("", "/login", "/join").permitAll()
+				.requestMatchers("/admin").hasRole("ADMIN").requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+				.anyRequest().authenticated());
+
+		return http.build();
+	}
+ }

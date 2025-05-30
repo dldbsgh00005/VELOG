@@ -1,0 +1,73 @@
+# 📌 WebConfig
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+
+        registry.addMapping("/**").allowedOriginPatterns("http://localhost:5176","http://localhost:5177")
+                .allowedMethods("GET","POST","PUT","DELETE","OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true);
+    }
+}
+
+
+# 📌 WebSocketConfig
+
+@Configuration
+@EnableWebSocketMessageBroker
+public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+
+    @Override
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+        registry.addEndpoint("/ws","/ws/info")
+                .setAllowedOriginPatterns("http://localhost:5176","http://localhost:5177")
+                .withSockJS();
+    }
+
+    @Override
+    public void configureMessageBroker(MessageBrokerRegistry registry) {
+        registry.setApplicationDestinationPrefixes("/pub");
+        registry.enableSimpleBroker("/sub");
+    }
+}
+
+# 📌 WebSocketController
+
+@RestController
+@RequestMapping("")
+@Slf4j
+public class WebSocketController {
+    
+    ///  필드
+    private final SimpMessagingTemplate smt;
+    
+    ///  생성자
+    public WebSocketController(SimpMessagingTemplate smt) {
+        this.smt = smt;
+    }
+
+    ///  Send Message
+    @MessageMapping("/chat.sendMessage")
+    @SendTo("/sub/public")
+    public ChatMessageDTO sendMessage(@Payload ChatMessageDTO message ){   // 정적인 경로로 응답 할 것이므로 /sub 기본 경로를 사용
+        log.info("message.content : {} ", message.getContent() );
+        log.info("message.sender : {} ", message.getSender() );
+        return message;
+    }
+}
+
+# 📌 ChatMessageDTO
+
+@Getter
+@Setter @NoArgsConstructor @AllArgsConstructor
+public class ChatMessageDTO {
+
+    private String type;
+
+    private String sender;
+
+    private String content;
+}

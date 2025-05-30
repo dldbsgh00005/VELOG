@@ -1,0 +1,46 @@
+# 241023 ajax, spring security
+
+<html xmlns:th="http://www.thymeleaf.org" >
+<header>
+<meta th:name="_csrf" th:content=""${_csrf.token} >
+</header>
+<body>
+<button id="ajax_btn" >AjaxButton</button>
+</body>
+<script>
+
+function getCsrfToken = () => {
+  const csrf_token = document.getQuerySelctor('meta[name="_csrf"]').content 
+  return csrf_token
+}
+
+const ajax_btn = document.getElementById("ajax_btn")
+document.addEventListener("DOMContentLoaded", (event) => {
+event.preventDefault()
+
+ajax.btn.addEventListener("click", () => {
+
+axios({
+method : 'post',
+url : '[URL]',
+data : {
+"[KEY]" : "[VALUE]", 
+},
+headers : {
+  "content_type" : application/json,
+  "X-CSRF-TOKEN" : getCsrfToken(),
+}
+}) // axios
+.then(function(response){
+console.log(response)
+}) // then
+.catch(function(error){
+console.log(error)
+}) // catch
+
+})// ajax_btn.addEventListener()
+
+})// document.addEventListener()
+
+</script>
+</html>

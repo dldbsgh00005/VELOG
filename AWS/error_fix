@@ -1,0 +1,8 @@
+# error_fix
+
+1. crendentials ( aws_ec2_access_key_id , aws_ec2_secret_access )
+
+2. ec2 instance의 cli 접속 오류
+>> ec2 instance의 인바운드 규칙 확인 >> ssh 접속시 사용하는 22번 포트 규칙 확인 0.0.0.0/0 이면 모든 접속을 허용함.
+>> 이상이 없을시 ec2 중지 >> 안될시 강제 중지 시도 >> volumn 분리가 안됐을 시 volumn 강제 분리 후 ec2 재시작 
+
