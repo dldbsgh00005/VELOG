@@ -1,3 +1,4 @@
+```
 name: CI / CD Pipeline
 
 # main 브랜치 push or pull_request를 트리거로 동작
@@ -86,4 +87,4 @@ jobs:
         EOF
         # 임시 생성 된 PEM KEY 삭제
         rm -f $PEM_KEY_PATH
-        
+```
