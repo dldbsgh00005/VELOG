@@ -1,0 +1,46 @@
+💥트러블슈팅
+
+lombok 경로설정(@builder 및 lombok 기능 오류) 
+>> @builder 및 lombok 기능 사용 불가(springboot project starter에서 lombok을 선택한 상태)
+>>lombok 실행시 STS4를 찾지 못함
+>> lombok을 STS4와 같은 폴더에 넣음
+>> STS4.init 텍스트 파일 들어감
+>> 맨 아래 javaagent:lombok.jar 이라고 작성
+>> 기존에 lombok.jar 의 full path를 적어줬으나 읽어오지 못함. 같은 폴더에 있을 경우
+lombok.jar 라고 해당 파일 앞의 경로를 무시하고 적어야 하는듯.
+
+Swagger 버전 문제  240314
+>> springboot 2.7.5버전업에 따라 swagger 2.9.2 => 3.0.0을 시도 헀으나 실패 스프링부트 3.x 버전 이상은 springdoc 권장  (sprnigfox 업데이트 안됨, 돌아가긴 함)
+>>설정 방법 : pom.xml에 dependency 추가 ( springdoc 구글링 하면 공식 사이트 있음, openAPI 3 Library for Spring Boot)
+plugin도 추가해주긴 했는데 필수인지 아닌지는 확인 x 
+
+MariaDB 오류 해결
+>> error code : 10061 , cannot connect to 12.0.7.0??? (내 아이피 주소)  
+>> 해결방법 : 제어판>시스템 및 보안> 관리 도구> 서비스 > MariaDB 우클릭 및 실행
+
+convert string to Long
+
+index.html 에서 하이퍼링크 걸린 버튼을 누르면 /board/bootstrap로 이동하도록 했다가, 기존의    /bootstrap/test 으로 매핑된 컨트롤러의 메서드의 return 값이 /board/bootstrap 으로 동일한 루트를 가리킴. 
+>> html 에서 링크는 내 폴더 경로가 아니라 url을 찍어주도록 하자!
+
+VIEW 에서 CONTROLLER로 값을 보낼 때 한 DIV 안에 INPUT 과 TEXTAREA가 동시에 존재하여 각각의 NAME 값이 달라 CONTROLLER가 bootstrapDTO에 값을 바인딩하지 못함.
+>> input 태그를 주석처리 해줌 
+>> 혹은 input태그와 textarea 태그의 name 값을 동일하게 줘보자
+>> 위에 둘 다 의미가 있긴 하겠지만 실제 해결되었을 당시 해결책은 메소드의 return 값을 보증된 html로 바꿔서 보여주니깐 성공.  bootstrap_sample은 자꾸 get 오류 404 오류가 console에 찍혔음 
+>> 3번쨰도 아닌듯.... return 값을 다시 bootstrap_sample로 줬는데도 되네...
+>> name값 때문인 것으로 잠정 추정 결론.... bootstrapDTO 가 프린트시 주소값으로 표현 된 이유는 참조변수라서 그런걸로..? bootstrap.getId() 로 프린트 해주면 값이 잘 나옴
+
+View 에서 Controller 로 NULL 값이 넘어가는 현상이 발생
+>> 코드는 정상적으로 잘 작성했음 하지만 값이 null로 넘어가는 현상이 발생.
+>> DTO에 @SETTER를 추가해주니 정상 작동
+>>> 추후에 알게된 사실,   view에서 controller로 값을 받아올 때 @ModelAttribute 어노테이션을 쓰게 되는데 이게 DTO(혹은 해당 클래스)에 있는 setter 함수를 이용해서 받아오겠다는 의미. 그래서 @setter를 추가했을 때 해결이 되었던 것!
+
+ 구글클라우드플랫폼_로그인API_  [GSI_LOGGER]: The given origin is not allowed for the given client ID. 오류 발생 
+>> 구글 클라우드 플랫폼 접속 
+>> 사용자 인증 정보 
+>> OAuth 2.0 클라이언트 ID 설정 >>  승인된 자바스크립트 원본 URL 추가 ,   ( http://localhost  , http://localhost:8082 둘 다 추가 후 저장   )
+
+
+
+
+

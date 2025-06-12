@@ -1,0 +1,35 @@
+```
+Visual Studio Snippet Config
+
+- vscode를 실행한다.
+
+- Ctrl + Shift + P 를 누른다 ( 상단의 검색창이 실행되고 > 표시가 보인다. )
+
+- snippets: Configure Snippets 검색 후 클릭
+
+- javascript.json 을 검색 후 클릭한다.
+
+- 몇 줄의 주석이 {} 중괄호로 감싸져 있을텐데 중괄호 사이에 아래의 코드를 붙여 넣는다.
+
+"console log" : {
+			"prefix" : "clg",
+			"body" : [
+				"console.log($1)"
+			],
+			"description": "console.log()"
+		},
+		"document" : {
+			"prefix" : "doc",
+			"body" : [
+				"document"
+			],
+			"description": "document"
+		},
+		"function" : {
+			"prefix" : "fun",
+			"body" : [
+				"function"
+			],
+			"description": "function"
+		},
+```

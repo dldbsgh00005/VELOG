@@ -1,0 +1,36 @@
+# 241020(일) Github, Spring Security
+
+1. Git Config
+git config --global user.name
+git config --global user.email
+
+git config --global --add user.name
+git config --global --add user.email
+
+git remote -v
+git remote add origin [URL]
+git remote 
+
+git init
+
+git add .
+git commit -m "[MESSAGE]"
+git commit -am "[MESSAGE]"
+git push -u origin [BRANCH]
+git push
+
+git branch [BRANCH]
+git branch -d [BRANCH]
+git branch -D [BRANCH]
+git switch [BRANCH]
+git switch -c [BRANCH]
+
+git stash 
+git stash list
+git stash apply [stash name]
+
+git reset, revert ( reset은 기존의 history를 삭제하고 이전의 커밋으로 돌아가는것, revert는 과거의 히스토리로 새로운 커밋을 추가로 만드는 것)
+reset의 옵션, soft, mixed, hard
+
+
+
