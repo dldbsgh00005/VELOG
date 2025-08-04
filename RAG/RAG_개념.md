@@ -1,5 +1,5 @@
 <h2> RAG 개념 </h2> 
-<h4> RAG(Retrieval-Augmented Generation) : LLM 출력 최적화 -> 아웃풋 전 -> 신뢰성 확보된 외부 지식 베이스를 참조하는 프로세스 </h4>
+<li> RAG(Retrieval-Augmented Generation) : LLM 출력 최적화 -> 아웃풋 전 -> 신뢰성 확보된 외부 지식 베이스를 참조하는 프로세스 </li>
 
 <h2> 기존 LLM 문제점 </h2>
 <li> 기존 LLM 학습 데이터 -> 정적 -> 데이터 학습의 마감일 존재 </li>
