@@ -10,3 +10,8 @@
 <h2> RAG의 해결방안 </h2>
 <li> 신뢰성 있는 답변 확보 </li>
 <li> 재학습 과정 간단 (DB에 데이터를 삽입하면 끝) </li>
+
+<h2> DB 저장 수단 </h2>
+<li> RDB </li>
+<li> CSV </li>
+<li> Vector DB </li>
