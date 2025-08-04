@@ -21,3 +21,17 @@
 
 <h2> LLM - RAG 프로세스 다이어그램 </h2>
 <img width="850" height="506" alt="image" src="https://github.com/user-attachments/assets/fc7d2d86-f2ba-4c2e-ab5c-2f7d9116075b" />
+
+<h2> Context Search & Semantic Search </h2>
+<li>  </li>
+<li> CSV </li>
+<li> CSV </li>
+
+
+<h2> 관련 AWS 서비스 </h2>
+<li> AWS Bedrock -> FM을 빠른 RAG 외부 데이터 소스 연결 </li>
+<li> Vector 변환 / 검색 / 개선된 출력 생성 지원 </li>
+
+
+<h2> 데이터 변경사항 관리 </h2>
+<li> 데이터 갱신에 의한 기존 데이터 폐기 방법론 ... 추후 작업 예정 </li>
