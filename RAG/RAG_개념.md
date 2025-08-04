@@ -39,7 +39,7 @@
 <li> 서비스 특징 : 키워드가 명확함 (예 : 민사 소송) / 정형화된 형식 / 내용은 상이할 수 있음 </li>
 <li> 키워드 일정함 + 내용은 상이할 수 있음 -> 제목 기반 Context Search + 내용 기반 Sementic Search 하이브리드 전략 가능 할지 확인 / 검증 필요 </li>
 <li> Context Search 시 인프라 : DB (RDB or NoSQL) + 임베딩 모델 (없음) </li>
-<li> Sementic Search 시 인프라 : DB () </li>
+<li> Sementic Search 시 인프라 : DB (RDB) + Vector Embedding 라이브러리 (FAISS) </li>
 
 <h2> DB 선정 </h2>
 <li> Elastic Search : 기존에 Log 분석, 텍스트 검색을 위한 툴에 Vector 기능을 추가하여 대규모 Context Search + Sementic Search 하이브리드 전략이 가능 / ChromaDB, Milvus 등에 비해 대규모 데이터셋 처리 성능이 부족할 수 있음 / 본질적으로 검색 엔진이지만 DB 기능 지원 </li>
