@@ -18,3 +18,6 @@
 <li> RDB </li>
 <li> CSV </li>
 <li> Vector DB </li>
+
+<h2> LLM - RAG 프로세스 다이어그램 </h2>
+<img width="850" height="506" alt="image" src="https://github.com/user-attachments/assets/fc7d2d86-f2ba-4c2e-ab5c-2f7d9116075b" />
