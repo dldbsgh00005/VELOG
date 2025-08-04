@@ -42,12 +42,10 @@
 <li> Sementic Search 시 인프라 : DB () </li>
 
 <h2> DB 선정 </h2>
-<il> Elastic Search : 기존에 Log 분석, 텍스트 검색을 위한 툴에 Vector 기능을 추가하여 대규모 Context Search + Sementic Search 하이브리드 전략이 가능 </li>
-<li> / ChromaDB, Milvus 등에 비해 대규모 데이터셋 처리 성능이 부족할 수 있음 / 본질적으로 검색 엔진이지만 DB 기능 지원 </il>
-<br/>
-<il> ChromaDB : Python 호환성 높음 / 벡터 데이터 실시간 업데이트 기능 제공 / 생성형 AI와의 통합 용이 </il>
-<il> Milvus : 대규모 데이터셋 처리 속도 우수 / 대규모 벡터 데이터 처리에 최적화 / 관리와 설정 난이도 높음 / 커스터마이징이 비교적 제한됨 </il>
-<il> FAISS : Vector Embedding 라이브러리 / RDB나 NoSQL 등과 같이 사용 / Vector_id 를 기반으로 ORM 기반 식별자 검색 혹은 vector_id를 기반으로 인덱스 생성하여 검색 가능 (다양한 전략을 취사 선택) </il>
+<li> Elastic Search : 기존에 Log 분석, 텍스트 검색을 위한 툴에 Vector 기능을 추가하여 대규모 Context Search + Sementic Search 하이브리드 전략이 가능 / ChromaDB, Milvus 등에 비해 대규모 데이터셋 처리 성능이 부족할 수 있음 / 본질적으로 검색 엔진이지만 DB 기능 지원 </li>
+<li> ChromaDB : Python 호환성 높음 / 벡터 데이터 실시간 업데이트 기능 제공 / 생성형 AI와의 통합 용이  </li>
+<li> Milvus : 대규모 데이터셋 처리 속도 우수 / 대규모 벡터 데이터 처리에 최적화 / 관리와 설정 난이도 높음 / 커스터마이징이 비교적 제한됨  </li>
+<li> FAISS : Vector Embedding 라이브러리 / RDB나 NoSQL 등과 같이 사용 / Vector_id 를 기반으로 ORM 기반 식별자 검색 혹은 vector_id를 기반으로 인덱스 생성하여 검색 가능 (다양한 전략을 취사 선택)  </li>
 
 <h2> 데이터 변경사항 관리 </h2>
 <li> 데이터 갱신에 의한 기존 데이터 폐기 방법론 ... 추후 작업 예정 </li>
