@@ -23,9 +23,12 @@
 <img width="850" height="506" alt="image" src="https://github.com/user-attachments/assets/fc7d2d86-f2ba-4c2e-ab5c-2f7d9116075b" />
 
 <h2> Context Search & Semantic Search </h2>
-<li>  </li>
-<li> CSV </li>
-<li> CSV </li>
+<li> Context Search : 키워드 기반 검색 -> 명확한 키워드 유무로 성능 차이 발생 </li>
+
+<li> Semantic Search : 의미 검색 기반 -> 비교적 복잡도가 높은 질문 가능 </li>
+<li> 유사도 검사가 가능한 FAISS 등의 Vector DB 등 사용 가능 </li>
+<li> Semantic Search를 위한 OPEN AI의 text-embedding-3-small 경량화 모델 사용 </li>
+<li> HuggingFace 등의 자체 모델 구축 또한 가능 </li>
 
 
 <h2> 관련 AWS 서비스 </h2>
