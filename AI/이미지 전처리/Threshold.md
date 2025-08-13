@@ -2,9 +2,12 @@
 - 이미지를 이진화(Binarization) 할 때 흑 / 백으로 나누는 임계값
 
 ## 예시
-- pixel의 rgb단위는 0 ~ 255이고 (1개의 색상만을 써서 밝기 정보만 표시한다. GrayScale의 경우 흑 ~ 회색 ~ 백 사이의 구간만을 표시함)
+- pixel의 rgb단위는 0 ~ 255이고 (1개의 채널만을 써서 밝기 정보만 표시한다. GrayScale의 경우 흑 ~ 회색 ~ 백 사이의 구간만을 표시함)
 - 0 ~ 255 사이의 값으로 표시한다.
 - 이 떄 기준 값을 기준으로 흑 / 백처럼 분리하게 된다.
+- RGB(0, 0, 0) -> 검은색
+- RGB(128, 128, 128) -> 회색
+- RGB(255, 255, 255) -> 흰색
 
 # C# 코드 예시
 <img width="757" height="33" alt="image" src="https://github.com/user-attachments/assets/b07e9bf4-1a72-46ef-9c31-8f83aebdc2a5" />
