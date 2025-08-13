@@ -11,6 +11,7 @@
 
 # C# 코드 예시
 <img width="757" height="33" alt="image" src="https://github.com/user-attachments/assets/b07e9bf4-1a72-46ef-9c31-8f83aebdc2a5" />
+
 - 매개변수 1 : 원본 이미지 (src)
 - 매개변수 2 : 결과 저장할 변수 (res)
 - 매개변수 3 : 임계값 (threshold), 0이면 OTSU가 자동 처리
