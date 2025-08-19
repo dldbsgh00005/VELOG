@@ -1,13 +1,13 @@
 # JPA 개략
 
-# ORM ( Object Relation Mapping )
+## ORM ( Object Relation Mapping )
 
 ORM은 개념이고 이것을 구현한 구현체 Hibernate ( 등등 있지만 메인 스트림은 Hibernate )  
 
-# Hiberanate를 자바에 맞게 최적화 한 것이 JPA ( Java Persistence API ) 
+## Hiberanate를 자바에 맞게 최적화 한 것이 JPA ( Java Persistence API ) 
 
 
-JPA의 장점
+# JPA의 장점
 - 모든 엔티티는 객체다.
 - 객체가 할 수 있는 일은 다 할 수 있다.
 - @Entity 어노테이션이 붙은 클래스를 인식해서 DDL 실행을 자동화 할 수 있다. ( 해야만 한다 )
