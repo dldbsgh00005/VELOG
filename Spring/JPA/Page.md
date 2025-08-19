@@ -3,11 +3,12 @@
 - Page, Slice, Cursor 등이 있다.
 
 # Controller 
-- @RequestParam(defaultValue = "title") String keyword
-- @RequestParam(defaultValue = "0") int page
-- @RequestParam(defaultValue = "10") int size
-- @RequestParam(defaultValue = "desc") String sort
-
+```
+@RequestParam(defaultValue = "title") String keyword,
+@RequestParam(defaultValue = "0") int page,
+@RequestParam(defaultValue = "10") int size,
+@RequestParam(defaultValue = "desc") String sort
+```
 
 # Service
 
