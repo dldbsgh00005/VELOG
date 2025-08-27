@@ -1,3 +1,7 @@
+# 실험환경 (무려 14코어...)
+<img width="649" height="23" alt="image" src="https://github.com/user-attachments/assets/94848252-71f4-44b5-a50a-86ee114bc033" />
+
+
 # 실행 코드
 <img width="777" height="730" alt="image" src="https://github.com/user-attachments/assets/cbf04898-e050-4425-9a40-c0ed032ce41d" />
 
