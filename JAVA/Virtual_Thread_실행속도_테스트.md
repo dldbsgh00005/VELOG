@@ -35,3 +35,6 @@
 <img width="304" height="57" alt="image" src="https://github.com/user-attachments/assets/4ac9b561-410d-4b67-aa6f-85503984625d" />
 <img width="293" height="41" alt="image" src="https://github.com/user-attachments/assets/8da6635a-daf5-403a-9811-bddb9bf90605" />
 
+# 결론
+- 14코어 환경에서 돌려본 결과 어지간한 트래픽으로는 Virtual Thread가 오히려 독이 된다는 결과만 얻었다.
+- 추후 좀 더 구체적인 동작 (DB 1억건 조회 등) 응답 시간이 긴 동작들을 대상으로 진행 해보아도 좋을 것 같다.
