@@ -8,6 +8,7 @@
 # 장점
 - Thread 스케줄링을 JVM 내에서 한다.
 - OS의 부담 감소
+- 동기식 코드로 작성 가능 (CompletableFuture, Reactive 코드를 작성하지 않아도 내부적으로 효율적인 동작)
 
 # 단점
 - Context Switching 비용 발생
