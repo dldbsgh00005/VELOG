@@ -6,3 +6,7 @@ StreamAPI의 toList() 메소드는 immutable(불변성) List를 반환한다.
 
 # 해결방법
 명시적으로 Collectors.toList() 를 호출하자.
+
+
+# 해결 이미지
+<img width="570" height="265" alt="image" src="https://github.com/user-attachments/assets/b2fc741e-1dfe-4141-9aac-37a6fc6b709a" />
