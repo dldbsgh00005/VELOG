@@ -13,3 +13,4 @@ boolean isPalindrome(String s) {
 }
 
 ```
++ StringBuilder.class의 reverse() 활용 가능
