@@ -8,6 +8,7 @@ Server -> Client / 쿠키를 추가함
 
 # 위 경우, Client가 Server에게 Cookie를 전송하려면?
 > withCredentials:true
+> 도메인이 불일치 -> Cookie 직접 Parsing 불가 -> Domain + Path에 해당하는 모든 쿠기 전송됨
 
 # 쿠키의 Doamin 속성
 > 따로 지정하지 않으면 HostOnly=true 할당 (Server Domain 자동 할당)
@@ -29,3 +30,9 @@ Server -> Client / 쿠키를 추가함
 # 쿠키 삭제 조건
 > Name, Domain, Path
 > 문자열이 정확히 일치해야 삭제할 쿠키로 인식
+
+# 쿠키 파싱 조건
+> Domain이 동일할 시
+> Domain이 계층 구조에 포함될 시
+
+
