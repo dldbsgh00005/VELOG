@@ -1,11 +1,18 @@
+```
 Equals : Object에게 상속 받은 메소드, 문자열을 비교할 때 쓴다. (자세한 내용은 아래서.)
 == : 참조값(주소값)을 비교할 때 쓴다. Literal String은 **Constant Pool** 에 있다. 그러므로 항상 동일한 주소를 참조한다.
-> 단, Constructor 문자열은 Heap 영역에 있으므로 참조값이 다를 수 있다.
-
+# 단, Constructor 문자열은 Heap 영역에 있으므로 참조값이 다를 수 있다.
+```
 # Fields (String.class)
 <div>
 <img width="635" height="215" alt="image" src="https://github.com/user-attachments/assets/51728675-f79d-430f-9ee4-d1e286b120c2" /> 
 <img width="629" height="146" alt="image" src="https://github.com/user-attachments/assets/99188ecb-8ac5-406a-80b6-946e7a9949b2" />
+```
+value, coder 모두 Constant Pool 일 때만, 즉 Literal String일 때만 VM에 의해 보장 받는다.
+compiler가 상수값으로 초기화 해두고, 이후 재계산 하지 않는다.
+그러므로 이 것을 Constant Folding이라고 부른다.
+이 것은 JIT(Just In Time, Complie 해두고, 코드 실행 시점에 기계어로 변환) 최적화의 기법이다. 
+```
 </div>
 
 
