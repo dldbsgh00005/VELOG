@@ -16,7 +16,7 @@ compiler가 상수값으로 초기화 해두고, 이후 재계산 하지 않는�
 이 것은 JIT(Just In Time, Complie 해두고, 코드 실행 시점에 기계어로 변환) 최적화의 기법이다.
 
 coder: Encoding 방식 표기, 0과 1로 표기한다. 0은 Latin1, 1은 UTF16이다.
-COMPACT_STRINGS : JVM 최적화를 위한 기법이다. TRUE / FALSE 값을 가지는 Boolean 타입이다.
+COMPACT_STRINGS : JVM 최적화를 위한 기법이다. TRUE / FALSE 값을 가지는 Boolean 타입이다. (내부적으로 -XX:+CompactStrings 값을 활성/비활성화)
 > JDK8 : 모든 문자열을 char[] 로 저장 -> 모든 char은 2byte -> 무조건 char하나당 2bytes 이므로 메모리 비효율적 사용
 > JDK9 : COMPACT_STRINGS=true 일 때 -> Latin1 Encoding으로 충분하면 **coder = 0**, 한글, 일본어, 등 Latin1 Encoding만으로 불충분하면 **coder = 1**
 >>  ASCII 코드만 쓰거나, Latin1이 포함하는 북유럽 문자 등만 포함된 문자열일 때 byte[]로 저장해도 됨. 메모리 사용률 50% 감소. 
