@@ -10,7 +10,7 @@ Equals : Object에게 상속 받은 메소드, 문자열을 비교할 때 쓴다
 <img width="644" height="328" alt="image" src="https://github.com/user-attachments/assets/6aced0dd-db69-4a99-a894-64098a0ed642" />    <br/>
 
 ```
-value, coder 모두 Constant Pool 일 때만, 즉 Literal String일 때만 VM에 의해 보장 받는다.
+value, coder 모두 **Constant Pool** 일 때만, 즉 Literal String일 때만 VM에 의해 보장 받는다.
 compiler가 상수값으로 초기화 해두고, 이후 재계산 하지 않는다.
 그러므로 이 것을 Constant Folding이라고 부른다.
 이 것은 JIT(Just In Time, Complie 해두고, 코드 실행 시점에 기계어로 변환) 최적화의 기법이다.
