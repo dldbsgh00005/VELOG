@@ -3,10 +3,10 @@
 > Server Doamin : hello.co.kr
 > Cookie Attributes : **Secure=true**, **HttpOnly=true**, **MaxAge=0**, **Path=/**, **Domain=hello.co.kr**(**HostOnly**)
 
-# 상황
+# 상황1
 Server -> Client / 쿠키를 추가함 
 
-# 위 경우, Client가 Server에게 Cookie를 전송하려면?
+# [상황1], Client가 Server에게 Cookie를 전송하려면?
 > withCredentials:true
 > 도메인이 불일치 -> Cookie 직접 Parsing 불가 -> Domain + Path에 해당하는 모든 쿠기 전송됨
 
