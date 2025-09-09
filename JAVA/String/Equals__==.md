@@ -6,7 +6,9 @@ Equals : Object에게 상속 받은 메소드, 문자열을 비교할 때 쓴다
 # Fields (String.class)
 <div>
 <img width="635" height="215" alt="image" src="https://github.com/user-attachments/assets/51728675-f79d-430f-9ee4-d1e286b120c2" /> 
-<img width="629" height="146" alt="image" src="https://github.com/user-attachments/assets/99188ecb-8ac5-406a-80b6-946e7a9949b2" />
+<img width="629" height="146" alt="image" src="https://github.com/user-attachments/assets/99188ecb-8ac5-406a-80b6-946e7a9949b2" /> 
+
+  <br/>
 ```
 value, coder 모두 Constant Pool 일 때만, 즉 Literal String일 때만 VM에 의해 보장 받는다.
 compiler가 상수값으로 초기화 해두고, 이후 재계산 하지 않는다.
