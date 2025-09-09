@@ -20,7 +20,7 @@ Equals : Object에게 상속 받은 메소드, 문자열을 비교할 때 쓴다
 ```
 
 ## StringLatin1.equals() 구현부
-<img width="435" height="255" alt="image" src="https://github.com/user-attachments/assets/37b728f1-a250-49da-b30a-8b54c617ee5c" />
+<img width="435" height="255" alt="image" src="https://github.com/user-attachments/assets/37b728f1-a250-49da-b30a-8b54c617ee5c" /> <br/>
 ```
 - byte[] 배열의 길이의 동일성을 검증한다.
 - for문을 통해 순환하며 == 기반 Constant Pool 참조값 검증 
