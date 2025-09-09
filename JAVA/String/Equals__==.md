@@ -6,7 +6,7 @@ Equals : Object에게 상속 받은 메소드, 문자열을 비교할 때 쓴다
 # String.class - field
   
 ### value field
-<img width="635" height="215" alt="image" src="https://github.com/user-attachments/assets/51728675-f79d-430f-9ee4-d1e286b120c2" />
+<img width="635" height="215" alt="image" src="https://github.com/user-attachments/assets/51728675-f79d-430f-9ee4-d1e286b120c2" /> <br/>
 ### coder field
 <img width="629" height="146" alt="image" src="https://github.com/user-attachments/assets/99188ecb-8ac5-406a-80b6-946e7a9949b2" />
 
