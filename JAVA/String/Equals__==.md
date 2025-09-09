@@ -10,7 +10,9 @@ Equals : Object에게 상속 받은 메소드, 문자열을 비교할 때 쓴다
 
 
 # Equals : Object의 equals메소드를 Override한다. 
-> Object의 equals는 주소, 즉 참조값의 동일성을 확인한다. Literal String이라면 Constant Pool에 있는 값을 참조할테니 항상 주소가 동일하다.
+```
+Object의 equals는 주소, 즉 참조값의 동일성을 확인한다. Literal String이라면 Constant Pool에 있는 값을 참조할테니 항상 주소가 동일하다.
+```
 
 # String.class의 Equals 구현부
 <img width="466" height="179" alt="image" src="https://github.com/user-attachments/assets/0237fd83-ab7c-420e-b2c8-7b4a25f12a26" /> <br/>
