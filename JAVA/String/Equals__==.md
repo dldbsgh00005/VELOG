@@ -2,8 +2,8 @@ Equals : Object에게 상속 받은 메소드, 문자열을 비교할 때 쓴다
 == : 참조값(주소값)을 비교할 때 쓴다. Literal String은 **Constant Pool** 에 있다. 그러므로 항상 동일한 주소를 참조한다.
 > 단, Constructor 문자열은 Heap 영역에 있으므로 참조값이 다를 수 있다.
 
-<div>
 # Fields (String.class)
+<div>
 <img width="635" height="215" alt="image" src="https://github.com/user-attachments/assets/51728675-f79d-430f-9ee4-d1e286b120c2" /> 
 <img width="629" height="146" alt="image" src="https://github.com/user-attachments/assets/99188ecb-8ac5-406a-80b6-946e7a9949b2" />
 </div>
