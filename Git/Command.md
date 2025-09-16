@@ -1,3 +1,4 @@
+```
 # branch
 git branch [branch-name]
 
@@ -19,3 +20,5 @@ git push origin --delete [branch-name] // 원격 브랜치 삭제
 # pull
 git pull // 모든 원격 브랜치의 내용을 로컬에 동기화
 git pull origin [branch-name] 특정 원격 브랜치의 내용을 로컬에 동기화
+
+```
