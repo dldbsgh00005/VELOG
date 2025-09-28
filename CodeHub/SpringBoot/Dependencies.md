@@ -53,4 +53,10 @@ implementation 'org.springframework.kafka:spring-kafka'
 testImplementation 'org.springframework.security:spring-security-test'
 testImplementation 'org.springframework.boot:spring-boot-starter-test'
 testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+
+	/** FAKER **/
+	implementation 'net.datafaker:datafaker:2.3.1' // 최신 버전
+
+
 ```
