@@ -1,4 +1,7 @@
 ```
+/** STARTER **/
+	implementation 'org.springframework.boot:spring-boot-starter'
+
 /** JPA **/
 implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
