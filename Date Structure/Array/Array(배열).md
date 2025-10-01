@@ -12,3 +12,9 @@
 ## 활용처
 1. 조회량이 많을 때
 2. 삽입,삭제량이 적을 때
+
+# 다룰 구현체
+> Array
+> ArrayList
+> Associated Array
+> LinkedArray
