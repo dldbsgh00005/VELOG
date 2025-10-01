@@ -14,4 +14,5 @@ List는 Interface다. 정의만 해둔 상태. 개념적이다.
    > 단일 연결 리스트(Singly Linked List) : next 정보만 있다.
    > 양방향 연결 리스트(Doubly Linked List) : prev, next 정보만 있다.
    > 원형 연결 리스트(Circular Linked List) : Last Node가 First Node를 가리킴. next 정보
+   
 
