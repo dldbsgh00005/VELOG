@@ -22,5 +22,6 @@ ex1) * * * * * /home/usr/test.sh
 => 매분, 매시간, 매일, 매월, 매요일에 /home/usr/test.sh 를 실행한다. 
 => 매분 /home/usr/test.txt를 실행한다.
 
-ex2) 1,2 1-2 */2 * 0,1,6 /home/usr/test.sh => 매 1,2분 매 1-2시, 2일마다, 모든 월에, 모든 일,월,토요일에 /home/usr/test.sh를 실행한다.
+ex2) 1,2 1-2 */2 * 0,1,6 /home/usr/test.sh 
+=> 매 1,2분 매 1-2시, 2일마다, 모든 월에, 모든 일,월,토요일에 /home/usr/test.sh를 실행한다.
 ```
