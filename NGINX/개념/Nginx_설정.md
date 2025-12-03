@@ -10,3 +10,9 @@ server {
     ...
 }
 ```
+
+The server certificate is a public entity. It is sent to every client that connects to the server. The private key is a secure entity and should be stored in a file with restricted access, however, it must be readable by nginx’s master process. The private key may alternately be stored in the same file as the certificate:
+```
+    ssl_certificate     www.example.com.cert;
+    ssl_certificate_key www.example.com.cert;
+```
